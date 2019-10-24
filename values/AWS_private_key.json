@@ -1,0 +1,5 @@
+{
+    "name": "AWS_private_key",
+    "value": "AWS_private_key",
+    "from_secret": true
+}

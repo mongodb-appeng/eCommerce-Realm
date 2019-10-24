@@ -1,0 +1,70 @@
+{
+    "database": "ecommerce",
+    "collection": "customers",
+    "roles": [
+        {
+            "name": "owner",
+            "apply_when": {
+                "owner_id": "%%user.id"
+            },
+            "fields": {
+                "wishLists": {}
+            },
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "additional_fields": {}
+        },
+        {
+            "name": "shared",
+            "apply_when": {
+                "friends": "%%user.id"
+            },
+            "fields": {
+                "wishLists": {
+                    "fields": {
+                        "quantity": {
+                            "write": true,
+                            "read": true
+                        }
+                    },
+                    "write": false,
+                    "read": true
+                }
+            },
+            "write": false,
+            "insert": true,
+            "delete": false,
+            "additional_fields": {}
+        },
+        {
+            "name": "anyone",
+            "apply_when": {},
+            "write": {
+                "%%prevRoot": {
+                    "%exists": false
+                }
+            },
+            "insert": true,
+            "delete": false,
+            "additional_fields": {}
+        }
+    ],
+    "schema": {
+        "properties": {
+            "_id": {
+                "bsonType": "objectId"
+            },
+            "owner_id": {
+                "bsonType": "string"
+            },
+            "friends": {
+                "bsonType": "array",
+                "items": {
+                    "bsonType": "string"
+                }
+            }
+        }
+    }
+}

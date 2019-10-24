@@ -1,0 +1,5 @@
+{
+    "name": "sourceEmail",
+    "value": "a@clusterdb.com",
+    "from_secret": false
+}

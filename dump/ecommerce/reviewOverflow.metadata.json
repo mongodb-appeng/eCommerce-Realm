@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"ecommerce.reviewOverflow"},{"v":2,"key":{"productID":1},"name":"productID","ns":"ecommerce.reviewOverflow","background":false}],"uuid":"a8a59e3979314a0a9f16eb4fe3f0982c"}

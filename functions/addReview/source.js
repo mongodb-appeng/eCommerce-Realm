@@ -1,5 +1,3 @@
-// git was here
-
 /**
  * @typedef {Object} ReviewStats
  * @property {number} averageReviewScore

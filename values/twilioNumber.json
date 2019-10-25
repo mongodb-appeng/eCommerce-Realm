@@ -1,5 +1,5 @@
 {
     "name": "twilioNumber",
-    "value": "+441628200976",
+    "value": "<your-twilio-phone-number>",
     "from_secret": false
 }

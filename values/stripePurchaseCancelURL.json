@@ -1,5 +1,5 @@
 {
     "name": "stripePurchaseCancelURL",
-    "value": "https://ecommerce-iukkg.mongodbstitch.com/#/basket",
+    "value": "https://<your-stitch-app-name>.mongodbstitch.com/#/basket",
     "from_secret": false
 }

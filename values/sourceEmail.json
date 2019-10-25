@@ -1,5 +1,5 @@
 {
     "name": "sourceEmail",
-    "value": "a@clusterdb.com",
+    "value": "<your-source-email-address",
     "from_secret": false
 }

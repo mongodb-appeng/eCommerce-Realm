@@ -1,5 +1,5 @@
 {
     "name": "stripePublicKey",
-    "value": "pk_test_RkoUKX2VFhJ2hxKW4mNIXrXr00ZUnlTUep",
+    "value": "pk_test_<rest-of-your-stripe-public-key>",
     "from_secret": false
 }

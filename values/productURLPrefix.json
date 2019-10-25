@@ -1,5 +1,5 @@
 {
     "name": "productURLPrefix",
-    "value": "https://ecommerce-iukkg.mongodbstitch.com/#/product?productID=",
+    "value": "https://<your-app-name>.mongodbstitch.com/#/product?productID=",
     "from_secret": false
 }

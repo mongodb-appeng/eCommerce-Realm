@@ -25,14 +25,14 @@ The frontend code can be hosted on Stich/Realm static hosting.
 
 This backend application stores data in MongoDB Atlas and uses MongoDB Stitch as a serverless platform for all of the backend functionality.
 
-### Configure database and configure database
+### Configure database and load sample data
 If you don't already have a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cluster, you'll need to [create one](https://www.mongodb.com/cloud/atlas/register) – the M0 free tier is enough to get started, but an M30 (or higher) cluster is needed if you want to use [Atlas full-text search](https://docs.atlas.mongodb.com/full-text-search/) for the product search.
 
 To setup the collection indexes and sample product catalog (13K+ products):
 
 1. Add your IP address to your [Atlas whitelist](https://docs.atlas.mongodb.com/security-whitelist/)
 2. [Create Atlas database user](https://docs.atlas.mongodb.com/security-add-mongodb-users/)
-3. Download the [`dump`](https://github.com/am-MongoDB/eCommerce-Realm/tree/master/dump/ecommerce) folder
+3. Download the [`dump`](https://github.com/am-MongoDB/eCommerce/tree/master/dump) folder
 4. Restore the data:
 ```
 mongorestore --uri="mongodb+srv://your-username:your-password@your-cluster-name.mongodb.net/ecommerce" dump/
@@ -41,21 +41,20 @@ mongorestore --uri="mongodb+srv://your-username:your-password@your-cluster-name.
 
 ### Create the Stitch app
 1. Download this repo
+```
+git clone https://github.com/am-MongoDB/eCommerce-Realm.git
+```
 2. Use the [Stitch CLI](https://docs.mongodb.com/stitch/deploy/stitch-cli-reference/) to install the Stitch app – **the first attempt will fail**:
 
 ```
 cd eCommerce-Realm-master
-stitch-cli import  --include-hosting
+stitch-cli import
 ```
 3. Add Stitch secrets (you get these from your other cloud service providers):
 ```
-stitch-cli secrets add --name=stripeSecretKey --value="my-secret-key"
 stitch-cli secrets add --name=AWS_private_key --value="my-secret-key"
+stitch-cli secrets add --name=stripeSecretKey --value="my-secret-key"
 stitch-cli secrets add --name=TwilioAuthToken --value="my-secret-key"
-stitch-cli secrets add --name=AWS --value="my-secret-key"
-stitch-cli secrets add --name=AWS_MongoDB_mkt_key --value="my-secret-key"
-stitch-cli secrets add --name=newAWSKey --value="my-secret-key"
-stitch-cli secrets add --name=AWS-personal-private-key --value="my-secret-key"
-stitch-cli import  --include-hosting
+stitch-cli import
 ```
-4. Enable Hosting 
+4. Add frontend app to Stitch static hosting 

@@ -1,5 +1,0 @@
-{
-    "name": "s3MugBucket",
-    "value": "https://clusterdb-ecommerce-mugshots.s3.amazonaws.com/",
-    "from_secret": false
-}

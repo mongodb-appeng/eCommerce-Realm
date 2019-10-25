@@ -1,0 +1,6 @@
+{
+    "name": "sendText",
+    "actions": [
+        "send"
+    ]
+}

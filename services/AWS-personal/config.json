@@ -1,0 +1,11 @@
+{
+    "name": "AWS-personal",
+    "type": "aws",
+    "config": {
+        "accessKeyId": "AKIAIF2IIZ5B37QIDHZA"
+    },
+    "secret_config": {
+        "secretAccessKey": "AWS-personal-private-key"
+    },
+    "version": 1
+}

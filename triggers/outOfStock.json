@@ -1,0 +1,25 @@
+{
+    "name": "outOfStock",
+    "type": "DATABASE",
+    "config": {
+        "operation_types": [
+            "UPDATE",
+            "REPLACE"
+        ],
+        "database": "ecommerce",
+        "collection": "products",
+        "service_name": "mongodb-atlas",
+        "match": {
+            "fullDocument.internal.outOfStock": false,
+            "fullDocument.stockLevel": {
+                "$eq": {
+                    "$numberInt": "0"
+                }
+            }
+        },
+        "full_document": true,
+        "unordered": true
+    },
+    "function_name": "outOfStock",
+    "disabled": false
+}

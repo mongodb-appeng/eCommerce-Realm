@@ -48,13 +48,21 @@ git clone https://github.com/am-MongoDB/eCommerce-Realm.git
 
 ```
 cd eCommerce-Realm-master
-stitch-cli import
+stitch-cli import --strategy=replace
 ```
 3. Add Stitch secrets (you get these from your other cloud service providers):
 ```
 stitch-cli secrets add --name=AWS_private_key --value="my-secret-key"
 stitch-cli secrets add --name=stripeSecretKey --value="my-secret-key"
 stitch-cli secrets add --name=TwilioAuthToken --value="my-secret-key"
-stitch-cli import
+stitch-cli secrets add --name=AWS-personal-private-key --value="my-secret-key"
+
+stitch-cli import --strategy=replace
 ```
-4. Add frontend app to Stitch static hosting 
+4. Configure the Stitch App (through the Stitch UI)
+- Link Stitch app to your Atlas cluster.  In the Atlas UI, select `clusters` from the left-side, then click on `mongodb-atlas` and then select your Atlas cluster from the dropdown and save.
+- Set your own values for each of the `values` (and `secrets` if you didn't use the real values when importing the app) through the Stitch UI.
+
+5. Add frontend app to Stitch static hosting 
+Build the [frontend app](https://github.com/am-MongoDB/eCommerce) and drag the files onto the `Hosting` panel in the Stitch UI.
+6. Copy the link from the Hosting panel and browse to that page

@@ -1,5 +1,0 @@
-{
-    "name": "stripePurchaseSuccessURL",
-    "value": "https://ecommerce-iukkg.mongodbstitch.com/#/checkedout?session_id={CHECKOUT_SESSION_ID}",
-    "from_secret": false
-}

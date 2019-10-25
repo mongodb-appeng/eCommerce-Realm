@@ -1,5 +1,0 @@
-{
-    "name": "productImagePrefix",
-    "value": "https://ecommerce-mongodb-products.s3.amazonaws.com/",
-    "from_secret": false
-}

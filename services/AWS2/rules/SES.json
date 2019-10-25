@@ -1,6 +1,0 @@
-{
-    "name": "SES",
-    "actions": [
-        "ses:SendEmail"
-    ]
-}

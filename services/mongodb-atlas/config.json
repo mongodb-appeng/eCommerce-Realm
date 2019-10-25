@@ -2,6 +2,7 @@
     "name": "mongodb-atlas",
     "type": "mongodb-atlas",
     "config": {
+        "clusterName": "eCommerce",
         "readPreference": "primary",
         "wireProtocolEnabled": false
     },

@@ -43,7 +43,7 @@
             "apply_when": {},
             "write": {
                 "%%prevRoot": {
-                    "%exists": false
+                    "$exists": false
                 }
             },
             "insert": true,
@@ -56,14 +56,14 @@
             "_id": {
                 "bsonType": "objectId"
             },
-            "owner_id": {
-                "bsonType": "string"
-            },
             "friends": {
                 "bsonType": "array",
                 "items": {
                     "bsonType": "string"
                 }
+            },
+            "owner_id": {
+                "bsonType": "string"
             }
         }
     }

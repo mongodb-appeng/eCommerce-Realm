@@ -40,3 +40,22 @@ mongorestore --uri="mongodb+srv://your-username:your-password@your-cluster-name.
 5. (If running on M30+) enable full-text-search using the configuration from [fts.json](https://github.com/am-MongoDB/eCommerce-Realm/blob/master/fts.json)
 
 ### Create the Stitch app
+1. Download this repo
+2. Use the [Stitch CLI](https://docs.mongodb.com/stitch/deploy/stitch-cli-reference/) to install the Stitch app – **the first attempt will fail**:
+
+```
+cd eCommerce-Realm-master
+stitch-cli import  --include-hosting
+```
+3. Add Stitch secrets (you get these from your other cloud service providers):
+```
+stitch-cli secrets add --name=stripeSecretKey --value="my-secret-key"
+stitch-cli secrets add --name=AWS_private_key --value="my-secret-key"
+stitch-cli secrets add --name=TwilioAuthToken --value="my-secret-key"
+stitch-cli secrets add --name=AWS --value="my-secret-key"
+stitch-cli secrets add --name=AWS_MongoDB_mkt_key --value="my-secret-key"
+stitch-cli secrets add --name=newAWSKey --value="my-secret-key"
+stitch-cli secrets add --name=AWS-personal-private-key --value="my-secret-key"
+stitch-cli import  --include-hosting
+```
+4. Enable Hosting 

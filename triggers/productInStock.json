@@ -1,0 +1,23 @@
+{
+    "name": "productInStock",
+    "type": "DATABASE",
+    "config": {
+        "operation_types": [
+            "UPDATE"
+        ],
+        "database": "ecommerce",
+        "collection": "products",
+        "service_name": "mongodb-atlas",
+        "match": {
+            "updateDescription.updatedFields.stockLevel": {
+                "$gt": {
+                    "$numberInt": "0"
+                }
+            }
+        },
+        "full_document": true,
+        "unordered": true
+    },
+    "function_name": "productInStock",
+    "disabled": true
+}

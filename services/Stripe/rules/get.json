@@ -1,0 +1,13 @@
+{
+    "name": "get",
+    "actions": [
+        "get"
+    ],
+    "when": {
+        "%%args.url.host": {
+            "%in": [
+                "api.stripe.com"
+            ]
+        }
+    }
+}

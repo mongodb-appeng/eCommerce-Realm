@@ -1,0 +1,11 @@
+{
+    "name": "AWS2",
+    "type": "aws",
+    "config": {
+        "accessKeyId": "AKIA2QKJSCXBY426BJM3"
+    },
+    "secret_config": {
+        "secretAccessKey": "AWS_private_key"
+    },
+    "version": 1
+}

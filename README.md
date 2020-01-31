@@ -26,7 +26,7 @@ The frontend code can be hosted on Stich/Realm static hosting.
 This backend application stores data in MongoDB Atlas and uses MongoDB Stitch as a serverless platform for all of the backend functionality.
 
 ### Configure database and load sample data
-If you don't already have a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cluster, you'll need to [create one](https://www.mongodb.com/cloud/atlas/register) – while the code runs on a free M0 cluster an M10 or higher is needed to import the product data set, an M30 (or higher) cluster is needed if you want to use [Atlas full-text search](https://docs.atlas.mongodb.com/full-text-search/) for the product search.
+If you don't already have a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cluster, you'll need to [create one](https://www.mongodb.com/cloud/atlas/register) – a free M0 cluster will work.
 
 To setup the collection indexes and sample product catalog (13K+ products):
 
@@ -37,7 +37,7 @@ To setup the collection indexes and sample product catalog (13K+ products):
 ```
 mongorestore --uri="mongodb+srv://your-username:your-password@your-cluster-name.mongodb.net/ecommerce" dump/
 ```
-5. (If running on M30+) enable full-text-search using the configuration from [fts.json](https://github.com/am-MongoDB/eCommerce-Realm/blob/master/fts.json) and name the FTS index "Titles and descriptions".
+5. Enable full-text-search using the configuration from [fts.json](https://github.com/am-MongoDB/eCommerce-Realm/blob/master/fts.json) and name the FTS index "Titles and descriptions".
 
 ### Create the Stitch app
 1. Download this repo

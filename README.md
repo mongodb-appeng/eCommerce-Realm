@@ -37,7 +37,7 @@ To setup the collection indexes and sample product catalog (13K+ products):
 ```
 mongorestore --uri="mongodb+srv://your-username:your-password@your-cluster-name.mongodb.net/ecommerce" dump/
 ```
-5. (If running on M30+) enable full-text-search using the configuration from [fts.json](https://github.com/am-MongoDB/eCommerce-Realm/blob/master/fts.json)
+5. (If running on M30+) enable full-text-search using the configuration from [fts.json](https://github.com/am-MongoDB/eCommerce-Realm/blob/master/fts.json) and name the FTS index "Titles and descriptions".
 
 ### Create the Stitch app
 1. Download this repo
